@@ -1,0 +1,8 @@
+<%= turbo_stream.update "post" do %>
+  <div class="text-red-500 font-bold text-center mb-4">POST DELETED</div>
+  <div class="text-center">
+    <%= link_to 'Back to posts', posts_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+<% end %>
+
+<%= turbo_stream.update "notice", partial: "layouts/flash" %>

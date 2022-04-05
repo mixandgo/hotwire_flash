@@ -54,6 +54,9 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
+      format.turbo_stream do
+        flash.now.notice = "Post was successfully destroyed."
+      end
       format.html do
  redirect_to posts_url, notice: "Post was successfully destroyed." end
       format.json { head :no_content }
