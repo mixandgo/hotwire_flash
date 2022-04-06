@@ -5,4 +5,4 @@
   </div>
 <% end %>
 
-<%= turbo_stream.update "notice", partial: "layouts/flash" %>
+<%= turbo_stream.replace "notice", partial: "layouts/flash" %>
